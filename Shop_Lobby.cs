@@ -15,11 +15,6 @@ public class Shop_Lobby : MonoBehaviour
     {
         public GameObject button;
         public TMP_Text priceText;
-        public int price;
-        public EShopType type;
-        public int max = 3;
-        public int current;
-        public TMP_Text countText;
     }
     [SerializeField] private ButtonObject[] _button = new ButtonObject[9];
     [SerializeField] private int _speedD = 10;
@@ -60,30 +55,6 @@ public class Shop_Lobby : MonoBehaviour
 
         switch (type)
         {
-            case EShopType.HP:
-                price = 10;
-                break;
-            case EShopType.Power:
-                price = 10;
-                break;
-            case EShopType.Rate:
-                price = 10;
-                break;
-            case EShopType.Num:
-                price = 10;
-                break;
-            case EShopType.SpeedDamage:
-                price = 20;
-                break;
-            case EShopType.Penetrate:
-                price = 30;
-                break;
-            case EShopType.LifeSteal:
-                price = 20;
-                break;
-            case EShopType.Crit:
-                price = 40;
-                break;
             case EShopType.ReduceDamage:
                 price = 30;
                 break;
@@ -180,4 +151,5 @@ public class Shop_Lobby : MonoBehaviour
     }
 
 }
+
 
