@@ -6,14 +6,6 @@ public class Shop_Lobby : MonoBehaviour
 {
     public enum EShopType
     {
-        HP,
-        Power,
-        Rate,
-        Num,
-        SpeedDamage,
-        Penetrate,
-        LifeSteal,
-        Crit,
         ReduceDamage
     }
 
