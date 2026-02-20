@@ -27,26 +27,26 @@ public class Shop_Lobby : MonoBehaviour
     [SerializeField] private int _crit = 6;
     [SerializeField] private int _reduceD = 10;
 
-    private void Awake()
-    {
-        for (int i = 0; i < _button.Length; i++)
-        {
-            _button[i].priceText = _button[i].button.GetComponentInChildren<TMP_Text>();
-            _button[i].type = (EShopType)i;
+    // private void Awake()
+    // {
+    //     for (int i = 0; i < _button.Length; i++)
+    //     {
+    //         _button[i].priceText = _button[i].button.GetComponentInChildren<TMP_Text>();
+    //         _button[i].type = (EShopType)i;
 
-            int index = i;
-            Button button = _button[i].button.GetComponent<Button>();
-            button.onClick.AddListener(() => BuyItem(index));
+    //         int index = i;
+    //         Button button = _button[i].button.GetComponent<Button>();
+    //         button.onClick.AddListener(() => BuyItem(index));
 
-            if (_button[i].countText != null)
-                _button[i].max = 3;
+    //         if (_button[i].countText != null)
+    //             _button[i].max = 3;
 
-            if (_button[i].priceText == null)
-                continue;
-            _button[i].price = SetPrice(_button[i].type);
-            _button[i].priceText.text = _button[i].price.ToString();
-        }
-    }
+    //         if (_button[i].priceText == null)
+    //             continue;
+    //         _button[i].price = SetPrice(_button[i].type);
+    //         _button[i].priceText.text = _button[i].price.ToString();
+    //     }
+    // }
 
     private void OnEnable()
     {
