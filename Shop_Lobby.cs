@@ -25,7 +25,7 @@ public class Shop_Lobby : MonoBehaviour
         public TMP_Text priceText;
         public int price;
         public EShopType type;
-        public int max = 1;
+        public int max = 3;
         public int current;
         public TMP_Text countText;
     }
@@ -102,7 +102,7 @@ public class Shop_Lobby : MonoBehaviour
     void BuyItem(int index)
     {
         var item = _button[index];
-        Debug.Log($"{index + 1}��° ��ư");
+        Debug.Log($"{index + 1}¹øÂ° ¹öÆ°");
 
         if (GameData.Instance.Money < item.price)
             return;
@@ -151,7 +151,7 @@ public class Shop_Lobby : MonoBehaviour
 
     void SetMoney()
     {
-        _money.text = "��: " + GameData.Instance.Money;
+        _money.text = "µ·: " + GameData.Instance.Money;
     }
 
     void SetItem()
@@ -188,3 +188,4 @@ public class Shop_Lobby : MonoBehaviour
     }
 
 }
+
